@@ -13,11 +13,56 @@ class HelloWorld extends React.Component {
 	}
 }
 
-class JSXDemo extends React.Component {
+class ESSix extends React.Component {
 	render() {
+		//ES6 features
+
+		//const must be assigned an initial value but cannot be redeclared within the same scope.
 		const name = "Kunj";
+
+		//Example of spread operator, denoted by … is used to expand iterable objects into multiple elements.
 		var arr = [1,2,3];
-		console.log(...arr)
+		console.log(...arr);
+
+		//template literals: include embedded expressions, denoted by backticks(`).
+		const student = {
+			name: 'Kunj Sharma',
+			city: 'Ajmer'
+		};
+		let message = `Hello ${student.name} from ${student.city}`;
+
+		//Default function parameters while initialisation
+		function greet(name = 'Kunj', message = 'Welcome') {
+			return `${message} ${name}`;
+		}
+		console.log(greet()); // Welcome Kunj
+		console.log(greet('Anuj')); // Welcome Anuj
+
+		//Destructuring
+		//1
+		const points = [20, 30, 40];
+		const [x, y, z] = points;
+		console.log(x, y, z); //20 30 40
+		//2
+		const nums = {
+			one: 20,
+			two: 30,
+			three: 40
+		};
+		const {one, two, three} = nums;
+		console.log(one, two, three); //20 30 40
+		//3
+		let type = 20;
+		let color = 30;
+		let model = 40;
+
+		const nums2 = {
+			one,
+			two,
+			three
+		};
+		console.log(nums2); //Object { one: 20, two: 30, three: 40 }
+
 		return (
 			<span>
 				<p className="heading">Javascript Examples</p>
@@ -81,7 +126,7 @@ class App extends React.Component {
 		return (
 			<span>
 				<HelloWorld />
-				<JSXDemo />
+				<ESSix />
 				<Table />
 			</span>
 		);
