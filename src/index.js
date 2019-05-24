@@ -52,16 +52,16 @@ class ESSix extends React.Component {
 		const {one, two, three} = nums;
 		console.log(one, two, three); //20 30 40
 		//3
-		let type = 20;
-		let color = 30;
-		let model = 40;
+		let four = 50;
+		let five = 60;
+		let six = 70;
 
 		const nums2 = {
-			one,
-			two,
-			three
+			four,
+			five,
+			six
 		};
-		console.log(nums2); //Object { one: 20, two: 30, three: 40 }
+		console.log('>>>>>' , nums2); //Object { one: 20, two: 30, three: 40 }
 
 		return (
 			<span>
