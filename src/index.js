@@ -15,7 +15,7 @@ class HelloWorld extends React.Component {
 
 class ESSix extends React.Component {
 	render() {
-		//ES6 features
+		//ES6 features from `The Andela Way`
 
 		//const must be assigned an initial value but cannot be redeclared within the same scope.
 		const name = "Kunj";
@@ -63,6 +63,20 @@ class ESSix extends React.Component {
 			six
 		};
 		console.log(nums2); //Object { four: 50, five: 60, six: 70 }
+
+		//Arrow functions
+		//If body is a single line of code writing return not required.
+		const n = name => name.toUpperCase();
+		const l = (name, city) => console.log(`${name} is from ${city}.`);//two parameters
+		l('Kunj', 'Ajmer');
+		console.log(n('kunj'));
+		//Block body syntax: if there is more than one line, 
+		const b = name => {
+		  name = name.toUpperCase();
+		  return `${name.length} characters make up ${name}'s name`;
+		};
+		console.log('name', b('aaaaaa'));
+
 
 		return (
 			<span>
