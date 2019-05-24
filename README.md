@@ -1,4 +1,4 @@
-This project has basic code/examples re JSX and React for absolute beginners only.
+This project has basic code/examples re JSX and React for absolute beginners only. Don't use until prototype releases.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

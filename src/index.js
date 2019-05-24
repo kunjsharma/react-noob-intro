@@ -26,10 +26,11 @@ class ESSix extends React.Component {
 
 		//template literals: include embedded expressions, denoted by backticks(`).
 		const student = {
-			name: 'Kunj Sharma',
+			name: 'Kunj',
 			city: 'Ajmer'
 		};
 		let message = `Hello ${student.name} from ${student.city}`;
+		console.log(message); //Hello Kunj from Ajmer
 
 		//Default function parameters while initialisation
 		function greet(name = 'Kunj', message = 'Welcome') {
@@ -61,7 +62,7 @@ class ESSix extends React.Component {
 			five,
 			six
 		};
-		console.log('>>>>>' , nums2); //Object { one: 20, two: 30, three: 40 }
+		console.log(nums2); //Object { four: 50, five: 60, six: 70 }
 
 		return (
 			<span>
