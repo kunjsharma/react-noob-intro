@@ -2,16 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class HelloWorld extends React.Component {
-	render() {
-		return (
-			<span>
-				<p className="heading">Hello</p>
-				<p className="paragraph">World</p>
-			</span>	
-		)
-	}
-}
+
 
 class ESSix extends React.Component {
 	render() {
@@ -75,7 +66,7 @@ class ESSix extends React.Component {
 		  name = name.toUpperCase();
 		  return `${name.length} characters make up ${name}'s name`;
 		};
-		console.log('name', b('aaaaaa'));
+		console.log('name', b('jack'));
 
 
 		return (
@@ -84,7 +75,7 @@ class ESSix extends React.Component {
 				<p>{name}</p>
 				<p>{2 + 2}</p>
 				<p>{(name === "Kunj")}</p>
-				<p>{(name==="Kunj")? "Sharma": "De`costa"}</p>
+				<p>{(name==="Kunj")? "Sharma": "Perry"}</p>
 				<p>{arr.map((index) => index * 2)}</p>
 				<p></p>
 			</span>
@@ -92,57 +83,43 @@ class ESSix extends React.Component {
 	}
 }
 
-class TableRow extends React.Component {
-	render() {
-	   return (
-		  <tr>
-			 <td>{this.props.data.name}</td>
-			 <td>{this.props.data.designation}</td>
-		  </tr>
-	   );
-	}
- }
 
-class Table extends React.Component {
-	constructor() {
-		super();
-		this.state = {
-			data: 
-			[
-			   {
-				  "name":"Kunj",
-				  "designation":"e-Learning Developer"
-			   },
-			   {
-				  "name":"Darren",
-				  "designation":"Graphic Designer"
-			   },
-			   {
-				  "name":"Anuj",
-				  "designation":"Technical Consultant"
-			   }
-			]
-		 }
-	}
+class ListItem extends React.Component {
 	render() {
 		return (
-			<table>
-               <tbody>
-                  {this.state.data.map((person, i) => <TableRow key = {i} 
-                     data = {person} />)}
-               </tbody>
-            </table>
+			<li>{this.props.item}</li>
 		);
 	}
 }
+class List extends React.Component {
+	constructor() {
+		super();
+
+		this.list = [
+			"Sprint Motor Sport",
+			"Frangypani Water Activity",
+			"Clean and Green Energy"
+		]
+	}
+
+	render() {
+		return (
+			<ul>
+				{this.list.map((name, i) => <ListItem key={i} item={name}/>)}
+			</ul>
+		);
+	}
+}
+
 
 class App extends React.Component {
 	render() {
 		return (
 			<span>
-				<HelloWorld />
+			
 				<ESSix />
-				<Table />
+			
+				<List />
 			</span>
 		);
 	}
