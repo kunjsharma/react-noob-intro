@@ -2,7 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-
+class HelloWorld extends React.Component {
+	render() {
+		return (
+			<span>
+				<p className="heading">Hello</p>
+				<p className="paragraph">World</p>
+			</span>	
+		)
+	}
+}
 
 class ESSix extends React.Component {
 	render() {
@@ -82,7 +91,7 @@ class ESSix extends React.Component {
 		);
 	}
 }
-
+////////////////////////////////////////////////////////////////
 
 class ListItem extends React.Component {
 	render() {
@@ -110,15 +119,58 @@ class List extends React.Component {
 		);
 	}
 }
+///////////////////////////////////////////////////////////////
+class TableRow extends React.Component {
+	render() {
+	   return (
+		  <tr>
+			 <td>{this.props.data.name}</td>
+			 <td>{this.props.data.designation}</td>
+		  </tr>
+	   );
+	}
+ }
 
+class Table extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			data: 
+			[
+			   {
+				  "name":"Kunj",
+				  "designation":"e-Learning Developer"
+			   },
+			   {
+				  "name":"Darren",
+				  "designation":"Graphic Designer"
+			   },
+			   {
+				  "name":"Anuj",
+				  "designation":"Technical Consultant"
+			   }
+			]
+		 }
+	}
+	render() {
+		return (
+			<table>
+               <tbody>
+                  {this.state.data.map((person, i) => <TableRow key = {i} 
+                     data = {person} />)}
+               </tbody>
+            </table>
+		);
+	}
+}
 
 class App extends React.Component {
 	render() {
 		return (
 			<span>
-			
+				<HelloWorld />
 				<ESSix />
-			
+				<Table />
 				<List />
 			</span>
 		);
