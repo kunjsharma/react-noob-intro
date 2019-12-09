@@ -18,7 +18,7 @@ class ESSix extends React.Component {
 		//ES6 features from `The Andela Way`
 
 		//const must be assigned an initial value but cannot be redeclared within the same scope.
-		const name = "Kunj";
+		const name = "Anuj";
 
 		//Example of spread operator, denoted by … is used to expand iterable objects into multiple elements.
 		var arr = [1,2,3];
@@ -26,17 +26,17 @@ class ESSix extends React.Component {
 
 		//template literals: include embedded expressions, denoted by backticks(`).
 		const student = {
-			name: 'Kunj',
+			name: 'Anuj',
 			city: 'Ajmer'
 		};
 		let message = `Hello ${student.name} from ${student.city}`;
-		console.log(message); //Hello Kunj from Ajmer
+		console.log(message); //Hello Anuj from Ajmer
 
 		//Default function parameters while initialisation
-		function greet(name = 'Kunj', message = 'Welcome') {
+		function greet(name = 'Anuj', message = 'Welcome') {
 			return `${message} ${name}`;
 		}
-		console.log(greet()); // Welcome Kunj
+		console.log(greet()); // Welcome Anuj
 		console.log(greet('Anuj')); // Welcome Anuj
 
 		//Destructuring
@@ -68,8 +68,8 @@ class ESSix extends React.Component {
 		//If body is a single line of code writing return not required.
 		const n = name => name.toUpperCase();
 		const l = (name, city) => console.log(`${name} is from ${city}.`);//two parameters
-		l('Kunj', 'Ajmer');
-		console.log(n('kunj'));
+		l('Anuj', 'Ajmer');
+		console.log(n('anuj'));
 		//Block body syntax: if there is more than one line, 
 		const b = name => {
 		  name = name.toUpperCase();
@@ -83,8 +83,8 @@ class ESSix extends React.Component {
 				<p className="heading">Javascript Examples</p>
 				<p>{name}</p>
 				<p>{2 + 2}</p>
-				<p>{(name === "Kunj")}</p>
-				<p>{(name==="Kunj")? "Sharma": "Perry"}</p>
+				<p>{(name === "Anuj")}</p>
+				<p>{(name==="Anuj")? "Sharma": "Perry"}</p>
 				<p>{arr.map((index) => index * 2)}</p>
 				<p></p>
 			</span>
@@ -156,8 +156,7 @@ class Table extends React.Component {
 		return (
 			<table>
                <tbody>
-                  {this.state.data.map((person, i) => <TableRow key = {i} 
-                     data = {person} />)}
+                  {this.state.data.map((person, i) => <TableRow data = {person} />)}
                </tbody>
             </table>
 		);
