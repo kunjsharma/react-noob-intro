@@ -156,7 +156,8 @@ class Table extends React.Component {
 		return (
 			<table>
                <tbody>
-                  {this.state.data.map((person, i) => <TableRow data = {person} />)}
+                  {this.state.data.map((person, i) => <TableRow 
+                     data = {person} />)}
                </tbody>
             </table>
 		);
